@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.usertest.forceUpdate">
+      <class name="com.usertest.UKUSer">
         <methods>
-          <include name="forceUpdate"/>
+          <include name="newSearch"/>
         </methods>
-      </class> <!-- com.usertest.forceUpdate -->
+      </class> <!-- com.usertest.UKUSer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

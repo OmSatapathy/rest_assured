@@ -3,7 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.usertest.forceUpdate"/>
+      <class name="com.usertest.UKUSer"/>
+      <class name="com.usertest.US"/>
+      <class name="com.usertest.Mattcher"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,15 +1,10 @@
 package com.usertest;
 
-import org.testng.annotations.Test;
-import java.util.HashMap;
-
-import org.json.JSONObject;
-import org.testng.ITestContext;
-import org.testng.annotations.Test;
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matcher.*;
 import static org.hamcrest.Matchers.equalTo;
+import java.util.HashMap;
+import org.json.JSONObject;
+import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 
@@ -61,21 +56,16 @@ public class US {
 	       .when()
 	             .post(baseurl_us+"/auth/jobseeker/password")
 	       .jsonPath().get("data.token");
-	
-		
-	
 
 			
 		   
 	  }
 	  
 	  
-	  
 	  @Test
 	  public void newSearch() {
 		   
-			
-			
+		
 			given()
 			     .contentType("application/json")
 			     .header("AUTH-TOKEN",us_jobseekerToken)

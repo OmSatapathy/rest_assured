@@ -1,18 +1,14 @@
 package com.usertest;
 
-import org.testng.annotations.Test;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+
 import java.util.HashMap;
 
 import org.json.JSONObject;
-import org.testng.Assert;
-import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
-
-import static io.restassured.RestAssured.*;
-
-import static org.hamcrest.Matchers.*;
 
 public class UKUSer {
 	
@@ -54,7 +50,7 @@ public class UKUSer {
 	}	
 	
    @Test
-   public void login_existinguser_uk(ITestContext context) {
+   public void login_existinguser_uk() {
 	   
 		JSONObject login = new JSONObject();
 		login.put("email", "totaljob5@yopmail.com");
@@ -78,16 +74,11 @@ public class UKUSer {
 	   
    }
    
-   
-   
-   
   
   
 //  @Test ( for old search)
-   public void searchDetails(ITestContext context) {
-	   
-	   
-	   String token = (String) context.getAttribute("user_token");
+   public void searchDetails() {
+	  
 	   
 	   JSONObject obj = new JSONObject();
 	   obj.put("postcode", "W1C 1DE");

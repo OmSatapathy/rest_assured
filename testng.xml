@@ -5,7 +5,6 @@
     <classes>
       <class name="com.usertest.UKUSer"/>
       <class name="com.usertest.US"/>
-
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

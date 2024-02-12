@@ -1,5 +1,6 @@
 package com.usertest;
 
+import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -13,12 +14,13 @@ import io.restassured.response.Response;
 public class UKUSer {
 	
 	
-	public static String baseurl_uk = "https://hunter-uk-master.sonic-dev.net/hunter/api/v2";
-	public static String baseurl_us = "https://hunter-us-master.sonic-dev.net/hunter/api/v2";
+	public static String stagingbaseurl_uk = "https://hunter-uk-master.sonic-dev.net/hunter/api/v2";
+	public static String stagingbaseurl_us = "https://hunter-us-master.sonic-dev.net/hunter/api/v2";
 	
 	static String jobseekerToken ;
+	static String jobseekerToken2 ;
 
-	@Test
+	@Test(priority=1)
 	public static void forceUpdate() {
 		
 	
@@ -39,7 +41,7 @@ public class UKUSer {
 		         .contentType("application/json")
 	             .body(jb.toString())
 	        .when()
-	              .post(baseurl_uk+"/forceUpdate/update")
+	              .post(stagingbaseurl_uk+"/forceUpdate/update")
 	        .then()
 	        .statusCode(200)
                  .body("data", equalTo("IGNORE"));
@@ -49,7 +51,7 @@ public class UKUSer {
 
 	}	
 	
-   @Test
+   @Test(priority = 2)
    public void login_existinguser_uk() {
 	   
 		JSONObject login = new JSONObject();
@@ -62,22 +64,39 @@ public class UKUSer {
               .contentType("application/json")
               .body(login.toString())
         .when()
-              .post(baseurl_uk+"/auth/jobseeker/password");
-     
-     
+              .post(stagingbaseurl_uk+"/auth/jobseeker/password");
+        
 	
   jobseekerToken =  res.jsonPath().get("data.token");
- 
-// context.setAttribute("jobseekerToken", "token");
+
 
  System.out.println(jobseekerToken);
 	   
    }
    
+  @Test(priority = 3)
+   public void login_existinguser2_uk() {
+	   
+		JSONObject login = new JSONObject();
+		login.put("email", "18jan@yopmail.com");
+		login.put("password", "Jet@12345");
+		login.put("deviceType", "ANDROID"); 
+		
+		
+ Response res =       given()
+             .contentType("application/json")
+             .body(login.toString())
+       .when()
+             .post(stagingbaseurl_uk+"/auth/jobseeker/password");
+    
+    
+	
+ jobseekerToken2 =  res.jsonPath().get("data.token");
+
+  }
   
-  
-//  @Test ( for old search)
-   public void searchDetails() {
+  @Test(dependsOnMethods = {"login_existinguser_uk"}) 
+   public void oldSearch() {
 	  
 	   
 	   JSONObject obj = new JSONObject();
@@ -92,35 +111,34 @@ public class UKUSer {
 		
 		
 		
-		System.out.println(obj.toString());
+		//System.out.println(obj.toString());
 		
-		System.out.println("JS'token in 2nd m::   " + jobseekerToken);
 		
 		
 		given()
 		     .contentType("application/json")
 		     .header("AUTH-TOKEN",jobseekerToken)
 		     .body(obj.toString())
-		     .post(baseurl_uk+"/search/jobs/0/0?micro=Clenaer&macro=Other")
+		     .post(stagingbaseurl_uk+"/search/jobs/0/0?micro=Test&macro=Other")
 		     .then()
-		     .log().all();
+		     .statusCode(200)
+             .body("data.content.searchType[1]", equalTo("JOB"));
+		     
 		
 	
 	   
    }
   
-  
-  @Test
+
+  @Test(dependsOnMethods = { "login_existinguser2_uk" })
   public void newSearch() {
-	   
-		
-		
-		given()
+	   given()
 		     .contentType("application/json")
-		     .header("AUTH-TOKEN",jobseekerToken)
-		     .get(baseurl_uk+"/search/jobs?query=Cleaner&full_time=false&part_time=false&remote=false&no_experience=false&sort=FEATURED&max_radius=49.88967943466947&location_long=-0.12755&location_lat=51.5073&location_name=Charing%20Cross&page=1&page_size=30&agent=USER ")
+		     .header("AUTH-TOKEN",jobseekerToken2)
+		     .get(stagingbaseurl_uk+"/search/jobs?query=Test&full_time=false&part_time=false&remote=false&no_experience=false&sort=FEATURED&max_radius=38.43589401245117&location_long=-0.0844489145&location_lat=51.5054420236&location_name=London&page=1&page_size=30&agent=USER")
 		     .then()
 		     .statusCode(200)
+		     .body("data.content[0].active", equalTo(true))
              .body("data.content.searchType[1]", equalTo("JOB"));
 		     
 		

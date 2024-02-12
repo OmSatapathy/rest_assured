@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="TestSuite" time="19.173" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="TestSuite" time="17.24" errors="0" skipped="0">
   <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="21.0.1"/>
-    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/21.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="jansi.mode" value="force"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="20.0.1+9-29"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home/lib"/>
     <property name="maven.multiModuleProjectDirectory" value="/Users/om.satapthy/eclipse-workspace/RestAssured"/>
-    <property name="java.vm.vendor" value="Homebrew"/>
-    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="path.separator" value=":"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/Users/om.satapthy/eclipse-workspace/RestAssured"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="21.0.1"/>
+    <property name="java.runtime.version" value="20.0.1+9-29"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.io.tmpdir" value="/var/folders/vj/nlycg35525x19nm99bvhrnw80000gq/T/"/>
     <property name="line.separator" value="
@@ -23,49 +24,52 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/opt/homebrew/Cellar/maven/3.9.5/libexec/bin/m2.conf"/>
+    <property name="classworlds.conf" value="/Users/om.satapthy/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf6140706631635364044.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/om.satapthy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="maven.conf" value="/opt/homebrew/Cellar/maven/3.9.5/libexec/conf"/>
     <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="65.0"/>
+    <property name="java.class.version" value="64.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="13.0"/>
-    <property name="library.jansi.path" value="/opt/homebrew/Cellar/maven/3.9.5/libexec/lib/jansi-native"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/om.satapthy"/>
     <property name="user.timezone" value="Asia/Kolkata"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="21"/>
+    <property name="java.specification.version" value="20"/>
     <property name="user.name" value="om.satapthy"/>
-    <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.9.5/libexec/boot/plexus-classworlds-2.7.0.jar"/>
-    <property name="java.vm.specification.version" value="21"/>
+    <property name="java.class.path" value="/Users/om.satapthy/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_3.9.400.20230826-0755/jars/plexus-classworlds-2.7.0.jar"/>
+    <property name="java.vm.specification.version" value="20"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
-    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/21.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -Dstyle.color=always test"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-20.jdk/Contents/Home"/>
     <property name="apple.awt.application.name" value="Launcher"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="21.0.1"/>
+    <property name="java.version" value="20.0.1"/>
     <property name="native.encoding" value="UTF-8"/>
-    <property name="java.vendor" value="Homebrew"/>
-    <property name="maven.home" value="/opt/homebrew/Cellar/maven/3.9.5/libexec"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/om.satapthy/eclipse-workspace/RestAssured/EMBEDDED"/>
+    <property name="style.color" value="always"/>
     <property name="file.separator" value="/"/>
-    <property name="java.version.date" value="2023-10-17"/>
-    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="m2e.build.project.data.socket.port" value="51678"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="com.usertest.UKUSer" name="forceUpdate" time="1.613"/>
-  <testcase classname="com.usertest.UKUSer" name="login_existinguser_uk" time="1.014"/>
-  <testcase classname="com.usertest.UKUSer" name="newSearch" time="7.125"/>
-  <testcase classname="com.usertest.US" name="forceUpdate_us" time="1.112"/>
-  <testcase classname="com.usertest.US" name="login_existinguser_us" time="5.851"/>
-  <testcase classname="com.usertest.US" name="newSearch" time="2.187"/>
+  <testcase classname="com.usertest.UKUSer" name="forceUpdate" time="1.499"/>
+  <testcase classname="com.usertest.UKUSer" name="login_existinguser_uk" time="0.774"/>
+  <testcase classname="com.usertest.UKUSer" name="oldSearch" time="1.416"/>
+  <testcase classname="com.usertest.UKUSer" name="login_existinguser2_uk" time="1.089"/>
+  <testcase classname="com.usertest.UKUSer" name="newSearch" time="1.631"/>
+  <testcase classname="com.usertest.US" name="forceUpdate_us" time="0.957"/>
+  <testcase classname="com.usertest.US" name="login_existinguser_us" time="3.375"/>
+  <testcase classname="com.usertest.US" name="login_existinguser2_us" time="1.257"/>
+  <testcase classname="com.usertest.US" name="newSearch" time="3.734"/>
+  <testcase classname="com.usertest.US" name="newSerach2" time="1.202"/>
 </testsuite>

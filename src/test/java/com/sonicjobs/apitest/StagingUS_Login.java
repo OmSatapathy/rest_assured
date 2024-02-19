@@ -1,6 +1,7 @@
 package com.sonicjobs.apitest;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import com.sonicjobs.base.BaseUrl;
 
@@ -15,7 +16,7 @@ import org.json.JSONObject;
 import io.restassured.RestAssured;
 
 
-public class StagingUS extends BaseUrl{
+public class StagingUS_Login extends BaseUrl{
 
 	Properties prop;
 
@@ -80,9 +81,7 @@ public class StagingUS extends BaseUrl{
 	       .when()
 	             .post(stagingbaseurl_us+"/auth/jobseeker/password")
 	       .jsonPath().get("data.token");
-		 
 	
-			
 		   
 	  }
 	  
@@ -109,13 +108,13 @@ public class StagingUS extends BaseUrl{
 	  
 	  
 	  
-	  @Test (priority = 4)
+	  @Test (dependsOnMethods = {"login_existinguser_us"})
 	  public void newSearch() {
 		   	
 			given()
 			     .contentType("application/json")
 			     .header("AUTH-TOKEN",us_jobseekerToken)
-			     .get(stagingbaseurl_us+"/search/jobs?query=Cleaner&full_time=false&part_time=false&remote=false&no_experience=false&sort=FEATURED&max_radius=40.0&location_long=-74.00697&location_lat=40.71222&location_name=New%20York&page=1&page_size=30&location_id=6183f7d05add74754e41af41&agent=USER")
+			     .get(stagingbaseurl_us+"/search/jobs?query=Driver&full_time=false&part_time=false&remote=false&no_experience=false&sort=FEATURED&max_radius=40.0&location_long=-74.00697&location_lat=40.71222&location_name=New%20York&page=1&page_size=30&location_id=6183f7d05add74754e41af41&agent=USER")
 			     .then()
 			     .statusCode(200)
 			     .body("data.content[0].active", equalTo(true))
@@ -124,7 +123,7 @@ public class StagingUS extends BaseUrl{
 		   
 	  }
 	  
-	  @Test (priority = 5)
+	  @Test (dependsOnMethods = {"login_existinguser2_us"})
 	  public void newSerach2() {
 		  
 	       	given()
@@ -140,7 +139,5 @@ public class StagingUS extends BaseUrl{
 	     
 	  }
 	
-	  
 
-	   
 }

@@ -1,5 +1,6 @@
 package com.sonicjobs.apitest;
 
+import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -14,7 +15,7 @@ import com.sonicjobs.base.BaseUrl;
 
 import io.restassured.RestAssured;
 
-public class ProdUS extends BaseUrl{
+public class ProdUS_Login extends BaseUrl{
 
 Properties prop;
 
@@ -80,7 +81,6 @@ public void readFile() {
 	             .post(prodbaseurl_us+"/auth/jobseeker/password")
 	       .jsonPath().get("data.token");
 		 
-		 System.out.println(us_jobseekerToken);
 
 			
 		   
@@ -103,8 +103,7 @@ public void readFile() {
 	             .post(prodbaseurl_us+"/auth/jobseeker/password")
 	       .jsonPath().get("data.token");
 		 
-		 System.out.println(us_jobseekerToken2);
-
+	
 			
 		   
 	  }

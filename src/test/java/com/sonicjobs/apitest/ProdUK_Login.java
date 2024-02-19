@@ -1,5 +1,6 @@
 package com.sonicjobs.apitest;
 
+import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -14,7 +15,7 @@ import com.sonicjobs.base.BaseUrl;
 
 import io.restassured.response.Response;
 
-public class ProdUK extends BaseUrl{
+public class ProdUK_Login extends BaseUrl{
 	
 	Properties prop;
 	
@@ -84,8 +85,6 @@ public class ProdUK extends BaseUrl{
 		
 	  jobseekerToken =  res.jsonPath().get("data.token");
 
-
-	 System.out.println(jobseekerToken);
 		   
 	   }
 	   

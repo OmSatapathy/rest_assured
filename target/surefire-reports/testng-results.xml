@@ -2,54 +2,54 @@
 <testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-12T13:16:55 IST" name="Suite" finished-at="2024-02-12T13:17:12 IST" duration-ms="16949">
+  <suite started-at="2024-02-19T14:46:51 IST" name="Suite" finished-at="2024-02-19T14:47:02 IST" duration-ms="11242">
     <groups>
     </groups>
-    <test started-at="2024-02-12T13:16:55 IST" name="Test" finished-at="2024-02-12T13:17:12 IST" duration-ms="16949">
-      <class name="com.usertest.US">
-        <test-method signature="forceUpdate_us()[pri:1, instance:com.usertest.US@75c072cb]" started-at="2024-02-12T13:17:02 IST" name="forceUpdate_us" finished-at="2024-02-12T13:17:03 IST" duration-ms="957" status="PASS">
+    <test started-at="2024-02-19T14:46:51 IST" name="Test" finished-at="2024-02-19T14:47:02 IST" duration-ms="11242">
+      <class name="com.sonicjobs.apitest.StagingUK">
+        <test-method signature="forceUpdate_staginguk()[pri:1, instance:com.sonicjobs.apitest.StagingUK@2ed0fbae]" started-at="2024-02-19T14:46:51 IST" name="forceUpdate_staginguk" finished-at="2024-02-19T14:46:53 IST" duration-ms="1717" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forceUpdate_us -->
-        <test-method signature="login_existinguser_us()[pri:2, instance:com.usertest.US@75c072cb]" started-at="2024-02-12T13:17:03 IST" name="login_existinguser_us" finished-at="2024-02-12T13:17:06 IST" duration-ms="3374" status="PASS">
+        </test-method> <!-- forceUpdate_staginguk -->
+        <test-method signature="login_existinguser_staginguk()[pri:2, instance:com.sonicjobs.apitest.StagingUK@2ed0fbae]" started-at="2024-02-19T14:46:53 IST" name="login_existinguser_staginguk" finished-at="2024-02-19T14:46:54 IST" duration-ms="952" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login_existinguser_us -->
-        <test-method signature="login_existinguser2_us()[pri:3, instance:com.usertest.US@75c072cb]" started-at="2024-02-12T13:17:06 IST" name="login_existinguser2_us" finished-at="2024-02-12T13:17:08 IST" duration-ms="1256" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login_existinguser2_us -->
-        <test-method signature="newSearch()[pri:4, instance:com.usertest.US@75c072cb]" started-at="2024-02-12T13:17:08 IST" name="newSearch" finished-at="2024-02-12T13:17:11 IST" duration-ms="3733" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newSearch -->
-        <test-method signature="newSerach2()[pri:5, instance:com.usertest.US@75c072cb]" started-at="2024-02-12T13:17:11 IST" name="newSerach2" finished-at="2024-02-12T13:17:12 IST" duration-ms="1201" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newSerach2 -->
-      </class> <!-- com.usertest.US -->
-      <class name="com.usertest.UKUSer">
-        <test-method signature="forceUpdate()[pri:1, instance:com.usertest.UKUSer@2145433b]" started-at="2024-02-12T13:16:56 IST" name="forceUpdate" finished-at="2024-02-12T13:16:57 IST" duration-ms="1499" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forceUpdate -->
-        <test-method signature="login_existinguser_uk()[pri:2, instance:com.usertest.UKUSer@2145433b]" started-at="2024-02-12T13:16:57 IST" name="login_existinguser_uk" finished-at="2024-02-12T13:16:58 IST" duration-ms="775" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login_existinguser_uk -->
-        <test-method signature="oldSearch()[pri:0, instance:com.usertest.UKUSer@2145433b]" started-at="2024-02-12T13:16:58 IST" name="oldSearch" finished-at="2024-02-12T13:16:59 IST" depends-on-methods="com.usertest.UKUSer.login_existinguser_uk" duration-ms="1416" status="PASS">
+        </test-method> <!-- login_existinguser_staginguk -->
+        <test-method signature="oldSearch()[pri:0, instance:com.sonicjobs.apitest.StagingUK@2ed0fbae]" started-at="2024-02-19T14:46:54 IST" name="oldSearch" finished-at="2024-02-19T14:46:55 IST" depends-on-methods="com.sonicjobs.apitest.StagingUK.login_existinguser_staginguk" duration-ms="1342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oldSearch -->
-        <test-method signature="login_existinguser2_uk()[pri:3, instance:com.usertest.UKUSer@2145433b]" started-at="2024-02-12T13:16:59 IST" name="login_existinguser2_uk" finished-at="2024-02-12T13:17:00 IST" duration-ms="1088" status="PASS">
+        <test-method signature="login_existinguser2_uk()[pri:3, instance:com.sonicjobs.apitest.StagingUK@2ed0fbae]" started-at="2024-02-19T14:46:55 IST" name="login_existinguser2_uk" finished-at="2024-02-19T14:46:56 IST" duration-ms="1213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_existinguser2_uk -->
-        <test-method signature="newSearch()[pri:0, instance:com.usertest.UKUSer@2145433b]" started-at="2024-02-12T13:17:00 IST" name="newSearch" finished-at="2024-02-12T13:17:02 IST" depends-on-methods="com.usertest.UKUSer.login_existinguser2_uk" duration-ms="1631" status="PASS">
+        <test-method signature="newSearch()[pri:0, instance:com.sonicjobs.apitest.StagingUK@2ed0fbae]" started-at="2024-02-19T14:46:56 IST" name="newSearch" finished-at="2024-02-19T14:46:57 IST" depends-on-methods="com.sonicjobs.apitest.StagingUK.login_existinguser2_uk" duration-ms="963" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newSearch -->
-      </class> <!-- com.usertest.UKUSer -->
+      </class> <!-- com.sonicjobs.apitest.StagingUK -->
+      <class name="com.sonicjobs.apitest.StagingUS">
+        <test-method signature="forceUpdate_us()[pri:1, instance:com.sonicjobs.apitest.StagingUS@1d548a08]" started-at="2024-02-19T14:46:57 IST" name="forceUpdate_us" finished-at="2024-02-19T14:46:58 IST" duration-ms="875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forceUpdate_us -->
+        <test-method signature="login_existinguser_us()[pri:2, instance:com.sonicjobs.apitest.StagingUS@1d548a08]" started-at="2024-02-19T14:46:58 IST" name="login_existinguser_us" finished-at="2024-02-19T14:46:59 IST" duration-ms="821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_existinguser_us -->
+        <test-method signature="login_existinguser2_us()[pri:3, instance:com.sonicjobs.apitest.StagingUS@1d548a08]" started-at="2024-02-19T14:46:59 IST" name="login_existinguser2_us" finished-at="2024-02-19T14:47:00 IST" duration-ms="1182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_existinguser2_us -->
+        <test-method signature="newSearch()[pri:4, instance:com.sonicjobs.apitest.StagingUS@1d548a08]" started-at="2024-02-19T14:47:00 IST" name="newSearch" finished-at="2024-02-19T14:47:01 IST" duration-ms="1010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newSearch -->
+        <test-method signature="newSerach2()[pri:5, instance:com.sonicjobs.apitest.StagingUS@1d548a08]" started-at="2024-02-19T14:47:01 IST" name="newSerach2" finished-at="2024-02-19T14:47:02 IST" duration-ms="1143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newSerach2 -->
+      </class> <!-- com.sonicjobs.apitest.StagingUS -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -1,30 +1,25 @@
-package com.usertest;
+package com.sonicjobs.apitest;
 
 import org.testng.annotations.Test;
+
+
+import com.sonicjobs.base.BaseUrl;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+import java.io.FileInputStream;
 import java.util.HashMap;
+import java.util.Properties;
 
 import org.json.JSONObject;
-import org.testng.annotations.Test;
-
 import io.restassured.response.Response;
 
-public class UKUSer {
+public class StagingUK extends BaseUrl{
 	
-	
-	public static String stagingbaseurl_uk = "https://hunter-uk-master.sonic-dev.net/hunter/api/v2";
-	public static String stagingbaseurl_us = "https://hunter-us-master.sonic-dev.net/hunter/api/v2";
-	
-	static String jobseekerToken ;
-	static String jobseekerToken2 ;
+	Properties prop;	
 
 	@Test(priority=1)
-	public static void forceUpdate() {
-		
-	
-		
+	public static void forceUpdate_staginguk() {
 
 		HashMap<String, String> map = new HashMap<String, String>();
 		
@@ -51,12 +46,17 @@ public class UKUSer {
 
 	}	
 	
+	
+	
+	
    @Test(priority = 2)
-   public void login_existinguser_uk() {
+   public void login_existinguser_staginguk() {
 	   
+	  
+	   readFile();
 		JSONObject login = new JSONObject();
-		login.put("email", "totaljob5@yopmail.com");
-		login.put("password", "Jet@12345");
+		login.put("email", prop.getProperty("uk_email1"));
+		login.put("password", prop.getProperty("password"));
 		login.put("deviceType", "IOS");
 		
 		
@@ -65,37 +65,36 @@ public class UKUSer {
               .body(login.toString())
         .when()
               .post(stagingbaseurl_uk+"/auth/jobseeker/password");
-        
-	
-  jobseekerToken =  res.jsonPath().get("data.token");
 
-
- System.out.println(jobseekerToken);
+     jobseekerToken =  res.jsonPath().get("data.token");
 	   
    }
+   
+
    
   @Test(priority = 3)
    public void login_existinguser2_uk() {
 	   
+	
+	   readFile();
 		JSONObject login = new JSONObject();
-		login.put("email", "18jan@yopmail.com");
-		login.put("password", "Jet@12345");
+		login.put("email", prop.getProperty("uk_email2"));
+		login.put("password", prop.getProperty("password"));
 		login.put("deviceType", "ANDROID"); 
 		
 		
- Response res =       given()
-             .contentType("application/json")
-             .body(login.toString())
-       .when()
-             .post(stagingbaseurl_uk+"/auth/jobseeker/password");
-    
-    
-	
- jobseekerToken2 =  res.jsonPath().get("data.token");
+ Response res = given()
+               .contentType("application/json")
+               .body(login.toString())
+               .when()
+              .post(stagingbaseurl_uk+"/auth/jobseeker/password");
 
+    jobseekerToken2 =  res.jsonPath().get("data.token");
+    
+   
   }
   
-  @Test(dependsOnMethods = {"login_existinguser_uk"}) 
+  @Test(dependsOnMethods = {"login_existinguser_staginguk"}) 
    public void oldSearch() {
 	  
 	   
@@ -108,10 +107,6 @@ public class UKUSer {
 		
 		String cordinate[] = {"-0.141331712","51.515529775399997"};
 		obj.put("location",cordinate);
-		
-		
-		
-		//System.out.println(obj.toString());
 		
 		
 		
@@ -141,11 +136,26 @@ public class UKUSer {
 		     .body("data.content[0].active", equalTo(true))
              .body("data.content.searchType[1]", equalTo("JOB"));
 		     
-		
-		
 
-	   
 	   
   }
 
+
+	
+  public void readFile() {
+  		
+  		
+  		try (FileInputStream input = new FileInputStream("src/test/java/com/sonicjobs/base/credentials.properties")) 
+  		{
+
+  	        prop = new Properties();
+
+
+  	        prop.load(input);
+
+  	} catch(Exception e){
+  		
+      }
+  		
+  }
 }

@@ -1,28 +1,43 @@
-package com.usertest;
+package com.sonicjobs.apitest;
 
-import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
-import java.util.HashMap;
 
-import org.json.JSONArray;
+import java.io.FileInputStream;
+import java.util.HashMap;
+import java.util.Properties;
+
 import org.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.sonicjobs.base.BaseUrl;
+
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
 
-public class US {
+public class ProdUS extends BaseUrl{
 
-	public static String stagingbaseurl_us = "https://hunter-us-master.sonic-dev.net/hunter/api/v2";
+Properties prop;
+
+public void readFile() {
+			
+			
+			try (FileInputStream input = new FileInputStream("src/test/java/com/sonicjobs/base/credentials.properties")) 
+			{
+
+		        prop = new Properties();
+
+
+		        prop.load(input);
+
+		} catch(Exception e){
+			
+	    }
+			
+	}
 	
-	static String us_jobseekerToken ;
-	static String us_jobseekerToken2 ;
 	
 	 @Test(priority = 1)
-		public static void forceUpdate_us() {
+		public static void forceUpdate_produs() {
 			
 			
 			HashMap<String, String> map = new HashMap<String, String>();
@@ -40,7 +55,7 @@ public class US {
 		         .contentType("application/json")
 	             .body(jb.toString())
 	        .when()
-	              .post(stagingbaseurl_us+"/forceUpdate/update")
+	              .post(prodbaseurl_us+"/forceUpdate/update")
 	        .then()
 	        .statusCode(200)
                .body("data", equalTo("IGNORE"));
@@ -51,9 +66,10 @@ public class US {
 	  @Test(priority = 2)
 	  public void login_existinguser_us() {
 		   
+		  readFile();
 			JSONObject login = new JSONObject();
-			login.put("email", "akhileh@yopmail.com");
-			login.put("password", "Jet@12345");
+			login.put("email", prop.getProperty("us_email1"));
+			login.put("password", prop.getProperty("password"));
 			login.put("deviceType", "IOS");
 			
 			
@@ -61,7 +77,7 @@ public class US {
 	             .contentType("application/json")
 	             .body(login.toString())
 	       .when()
-	             .post(stagingbaseurl_us+"/auth/jobseeker/password")
+	             .post(prodbaseurl_us+"/auth/jobseeker/password")
 	       .jsonPath().get("data.token");
 		 
 		 System.out.println(us_jobseekerToken);
@@ -73,9 +89,10 @@ public class US {
 	  @Test(priority = 3)
 	  public void login_existinguser2_us() {
 		   
+		    readFile();
 			JSONObject login = new JSONObject();
-			login.put("email", "11jan@yopmail.com");
-			login.put("password", "Jet@12345");
+			login.put("email", prop.getProperty("us_email2"));
+			login.put("password", prop.getProperty("password"));
 			login.put("deviceType", "IOS");
 			
 			
@@ -83,7 +100,7 @@ public class US {
 	             .contentType("application/json")
 	             .body(login.toString())
 	       .when()
-	             .post(stagingbaseurl_us+"/auth/jobseeker/password")
+	             .post(prodbaseurl_us+"/auth/jobseeker/password")
 	       .jsonPath().get("data.token");
 		 
 		 System.out.println(us_jobseekerToken2);
@@ -92,16 +109,15 @@ public class US {
 		   
 	  }
 	  
-	  
-	  
-	  @Test (priority = 4)
+  
+	  @Test (dependsOnMethods = {"login_existinguser_us"})
 	  public void newSearch() {
 		   
 		
 			given()
 			     .contentType("application/json")
 			     .header("AUTH-TOKEN",us_jobseekerToken)
-			     .get(stagingbaseurl_us+"/search/jobs?query=Cleaner&full_time=false&part_time=false&remote=false&no_experience=false&sort=FEATURED&max_radius=40.0&location_long=-74.00697&location_lat=40.71222&location_name=New%20York&page=1&page_size=30&location_id=6183f7d05add74754e41af41&agent=USER")
+			     .get(prodbaseurl_us+"/search/jobs?query=developer&full_time=false&part_time=false&remote=false&no_experience=false&sort=FEATURED&max_radius=40.0&location_long=-74.00697&location_lat=40.71222&location_name=New%20York&page=1&page_size=30&location_id=6183f7d05add74754e41af41&agent=USER")
 			     .then()
 			     .statusCode(200)
 			     .body("data.content[0].active", equalTo(true))
@@ -110,14 +126,14 @@ public class US {
 		   
 	  }
 	  
-	  @Test (priority = 5)
+	  @Test (dependsOnMethods = {"login_existinguser2_us"})
 	  public void newSerach2() {
 		  
 
 	       	given()
 			     .contentType("application/json")
 			     .header("AUTH-TOKEN",us_jobseekerToken2)
-			     .get(stagingbaseurl_us+"/search/jobs?query=Test&full_time=false&part_time=false&remote=false&no_experience=false&sort=FEATURED&max_radius=20.0&location_long=-74.00697&location_lat=40.71222&location_name=New%20York&page=1&page_size=30&agent=USER")
+			     .get(prodbaseurl_us+"/search/jobs?query=Test&full_time=false&part_time=false&remote=false&no_experience=false&sort=FEATURED&max_radius=20.0&location_long=-74.00697&location_lat=40.71222&location_name=New%20York&page=1&page_size=30&agent=USER")
 			     .then() 
 			     .statusCode(200)	             
 	             .body("data.content[0].active", equalTo(true))
@@ -126,6 +142,4 @@ public class US {
 
 	     
 	  }
-	   
-	   
 }

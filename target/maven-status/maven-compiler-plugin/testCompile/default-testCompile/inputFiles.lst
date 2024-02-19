@@ -1,3 +1,6 @@
-/Users/om.satapthy/eclipse-workspace/RestAssured/src/test/java/com/usertest/US.java
-/Users/om.satapthy/eclipse-workspace/RestAssured/src/test/java/com/usertest/UKUSer.java
-/Users/om.satapthy/eclipse-workspace/RestAssured/src/test/java/com/usertest/Mattcher.java
+/Users/om.satapthy/eclipse-workspace/RestAssured/src/test/java/com/sonicjobs/apitest/ProdUK.java
+/Users/om.satapthy/eclipse-workspace/RestAssured/src/test/java/com/sonicjobs/apitest/ProdUS.java
+/Users/om.satapthy/eclipse-workspace/RestAssured/src/test/java/com/sonicjobs/apitest/StagingUS.java
+/Users/om.satapthy/eclipse-workspace/RestAssured/src/test/java/com/sonicjobs/apitest/StagingUK.java
+/Users/om.satapthy/eclipse-workspace/RestAssured/src/test/java/com/sonicjobs/base/FileReader.java
+/Users/om.satapthy/eclipse-workspace/RestAssured/src/test/java/com/sonicjobs/base/BaseUrl.java

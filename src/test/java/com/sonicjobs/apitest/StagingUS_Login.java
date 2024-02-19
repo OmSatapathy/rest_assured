@@ -2,6 +2,7 @@ package com.sonicjobs.apitest;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import com.sonicjobs.base.BaseUrl;
 

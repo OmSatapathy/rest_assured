@@ -2,6 +2,7 @@ package com.sonicjobs.apitest;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 
 import com.sonicjobs.base.BaseUrl;
@@ -42,8 +43,6 @@ public class StagingUK_Login extends BaseUrl{
 	        .statusCode(200)
                  .body("data", equalTo("IGNORE"));
 
-                
-	
 
 	}	
 	

@@ -3,10 +3,11 @@
 <suite thread-count="2" parallel="methods" name="Suite">
   <test thread-count="2" parallel="methods" name="Test">
     <classes>
-      <class name="com.sonicjobs.apitest.StagingUS_Login"/>
-      <class name="com.sonicjobs.apitest.ProdUK_Login"/>
-      <class name="com.sonicjobs.apitest.StagingUK_Login"/>
-      <class name="com.sonicjobs.apitest.ProdUS_Login"/>
+     <class name="com.sonicjobs.apitest.ProdUK_Login"/>
+      <class name="com.sonicjobs.apitest.ProdUK_search"/>
+       <class name="com.sonicjobs.apitest.ProdUS_Login"/>
+      <class name="com.sonicjobs.apitest.ProdUS_Search"/>
+   
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

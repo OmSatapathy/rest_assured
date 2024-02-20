@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.sonicjobs.base.BaseUrl;
 
-public class ProdUK_Search extends BaseUrl{
+public class ProdUK_search extends BaseUrl{
 
 	
 	   @Test(dependsOnMethods = {"login_existinguser_uk"}) 

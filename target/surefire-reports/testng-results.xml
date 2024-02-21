@@ -2,54 +2,54 @@
 <testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-21T14:49:02 IST" name="Suite" finished-at="2024-02-21T14:49:14 IST" duration-ms="11738">
+  <suite started-at="2024-02-21T15:15:33 IST" name="Suite" finished-at="2024-02-21T15:15:45 IST" duration-ms="11662">
     <groups>
     </groups>
-    <test started-at="2024-02-21T14:49:02 IST" name="Test" finished-at="2024-02-21T14:49:14 IST" duration-ms="11738">
+    <test started-at="2024-02-21T15:15:33 IST" name="Test" finished-at="2024-02-21T15:15:45 IST" duration-ms="11662">
       <class name="com.sonicjobs.apitest.ProdUsSearch">
-        <test-method signature="newSearch()[pri:0, instance:com.sonicjobs.apitest.ProdUsSearch@34f5090e]" started-at="2024-02-21T14:49:06 IST" name="newSearch" finished-at="2024-02-21T14:49:07 IST" depends-on-methods="loginExistinguserUs" duration-ms="1115" status="PASS">
+        <test-method signature="newSearch()[pri:0, instance:com.sonicjobs.apitest.ProdUsSearch@34f5090e]" started-at="2024-02-21T15:15:37 IST" name="newSearch" finished-at="2024-02-21T15:15:38 IST" depends-on-methods="loginExistinguserUs" duration-ms="1207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newSearch -->
-        <test-method signature="newSerach2()[pri:0, instance:com.sonicjobs.apitest.ProdUsSearch@34f5090e]" started-at="2024-02-21T14:49:10 IST" name="newSerach2" finished-at="2024-02-21T14:49:14 IST" depends-on-methods="loginExistinguser2Us" duration-ms="3803" status="PASS">
+        <test-method signature="newSerach2()[pri:0, instance:com.sonicjobs.apitest.ProdUsSearch@34f5090e]" started-at="2024-02-21T15:15:41 IST" name="newSerach2" finished-at="2024-02-21T15:15:45 IST" depends-on-methods="loginExistinguser2Us" duration-ms="4056" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newSerach2 -->
       </class> <!-- com.sonicjobs.apitest.ProdUsSearch -->
       <class name="com.sonicjobs.apitest.ProdUsLogin">
-        <test-method signature="forceUpdateProdus()[pri:1, instance:com.sonicjobs.apitest.ProdUsLogin@31e5415e]" started-at="2024-02-21T14:49:02 IST" name="forceUpdateProdus" finished-at="2024-02-21T14:49:04 IST" duration-ms="1577" status="PASS">
+        <test-method signature="forceUpdateProdus()[pri:1, instance:com.sonicjobs.apitest.ProdUsLogin@31e5415e]" started-at="2024-02-21T15:15:33 IST" name="forceUpdateProdus" finished-at="2024-02-21T15:15:35 IST" duration-ms="1599" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forceUpdateProdus -->
-        <test-method signature="loginExistinguserUs()[pri:2, instance:com.sonicjobs.apitest.ProdUsLogin@31e5415e]" started-at="2024-02-21T14:49:04 IST" name="loginExistinguserUs" finished-at="2024-02-21T14:49:06 IST" duration-ms="1614" status="PASS">
+        <test-method signature="loginExistinguserUs()[pri:2, instance:com.sonicjobs.apitest.ProdUsLogin@31e5415e]" started-at="2024-02-21T15:15:35 IST" name="loginExistinguserUs" finished-at="2024-02-21T15:15:37 IST" duration-ms="1663" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginExistinguserUs -->
-        <test-method signature="loginExistinguser2Us()[pri:3, instance:com.sonicjobs.apitest.ProdUsLogin@31e5415e]" started-at="2024-02-21T14:49:09 IST" name="loginExistinguser2Us" finished-at="2024-02-21T14:49:10 IST" duration-ms="1624" status="PASS">
+        <test-method signature="loginExistinguser2Us()[pri:3, instance:com.sonicjobs.apitest.ProdUsLogin@31e5415e]" started-at="2024-02-21T15:15:39 IST" name="loginExistinguser2Us" finished-at="2024-02-21T15:15:41 IST" duration-ms="1606" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginExistinguser2Us -->
       </class> <!-- com.sonicjobs.apitest.ProdUsLogin -->
       <class name="com.sonicjobs.apitest.ProdUkLogin">
-        <test-method signature="forceUpdateProduk()[pri:1, instance:com.sonicjobs.apitest.ProdUkLogin@66498326]" started-at="2024-02-21T14:49:02 IST" name="forceUpdateProduk" finished-at="2024-02-21T14:49:04 IST" duration-ms="1577" status="PASS">
+        <test-method signature="forceUpdateProduk()[pri:1, instance:com.sonicjobs.apitest.ProdUkLogin@66498326]" started-at="2024-02-21T15:15:33 IST" name="forceUpdateProduk" finished-at="2024-02-21T15:15:35 IST" duration-ms="1599" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forceUpdateProduk -->
-        <test-method signature="loginExistinguserUk()[pri:2, instance:com.sonicjobs.apitest.ProdUkLogin@66498326]" started-at="2024-02-21T14:49:04 IST" name="loginExistinguserUk" finished-at="2024-02-21T14:49:05 IST" duration-ms="1401" status="PASS">
+        <test-method signature="loginExistinguserUk()[pri:2, instance:com.sonicjobs.apitest.ProdUkLogin@66498326]" started-at="2024-02-21T15:15:35 IST" name="loginExistinguserUk" finished-at="2024-02-21T15:15:36 IST" duration-ms="1457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginExistinguserUk -->
-        <test-method signature="loginExistinguser2Uk()[pri:3, instance:com.sonicjobs.apitest.ProdUkLogin@66498326]" started-at="2024-02-21T14:49:07 IST" name="loginExistinguser2Uk" finished-at="2024-02-21T14:49:08 IST" duration-ms="1471" status="PASS">
+        <test-method signature="loginExistinguser2Uk()[pri:3, instance:com.sonicjobs.apitest.ProdUkLogin@66498326]" started-at="2024-02-21T15:15:38 IST" name="loginExistinguser2Uk" finished-at="2024-02-21T15:15:39 IST" duration-ms="1426" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginExistinguser2Uk -->
       </class> <!-- com.sonicjobs.apitest.ProdUkLogin -->
       <class name="com.sonicjobs.apitest.ProdUkSearch">
-        <test-method signature="oldSearch()[pri:0, instance:com.sonicjobs.apitest.ProdUkSearch@a2431d0]" started-at="2024-02-21T14:49:05 IST" name="oldSearch" finished-at="2024-02-21T14:49:09 IST" depends-on-methods="loginExistinguserUk" duration-ms="3277" status="PASS">
+        <test-method signature="oldSearch()[pri:0, instance:com.sonicjobs.apitest.ProdUkSearch@a2431d0]" started-at="2024-02-21T15:15:36 IST" name="oldSearch" finished-at="2024-02-21T15:15:39 IST" depends-on-methods="loginExistinguserUk" duration-ms="2885" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oldSearch -->
-        <test-method signature="newSearch()[pri:0, instance:com.sonicjobs.apitest.ProdUkSearch@a2431d0]" started-at="2024-02-21T14:49:08 IST" name="newSearch" finished-at="2024-02-21T14:49:12 IST" depends-on-methods="loginExistinguser2Uk" duration-ms="3374" status="PASS">
+        <test-method signature="newSearch()[pri:0, instance:com.sonicjobs.apitest.ProdUkSearch@a2431d0]" started-at="2024-02-21T15:15:39 IST" name="newSearch" finished-at="2024-02-21T15:15:42 IST" depends-on-methods="loginExistinguser2Uk" duration-ms="2910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newSearch -->

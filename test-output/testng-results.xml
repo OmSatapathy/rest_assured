@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-19T15:24:31 IST" name="Default suite" finished-at="2024-02-19T15:24:37 IST" duration-ms="5468">
+  <suite started-at="2024-02-21T11:51:40 IST" name="Default suite" finished-at="2024-02-21T11:51:45 IST" duration-ms="4843">
     <groups>
     </groups>
-    <test started-at="2024-02-19T15:24:31 IST" name="Default test" finished-at="2024-02-19T15:24:37 IST" duration-ms="5468">
-      <class name="com.sonicjobs.apitest.StagingUS">
-        <test-method signature="forceUpdate_us()[pri:1, instance:com.sonicjobs.apitest.StagingUS@4b5a5ed1]" started-at="2024-02-19T15:24:31 IST" name="forceUpdate_us" finished-at="2024-02-19T15:24:33 IST" duration-ms="1417" status="PASS">
+    <test started-at="2024-02-21T11:51:40 IST" name="Default test" finished-at="2024-02-21T11:51:45 IST" duration-ms="4843">
+      <class name="com.sonicjobs.apitest.ProdUS_Login">
+        <test-method signature="forceUpdateProdus()[pri:1, instance:com.sonicjobs.apitest.ProdUS_Login@51c668e3]" started-at="2024-02-21T11:51:40 IST" name="forceUpdateProdus" finished-at="2024-02-21T11:51:42 IST" duration-ms="1585" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forceUpdate_us -->
-        <test-method signature="login_existinguser_us()[pri:2, instance:com.sonicjobs.apitest.StagingUS@4b5a5ed1]" started-at="2024-02-19T15:24:33 IST" name="login_existinguser_us" finished-at="2024-02-19T15:24:34 IST" duration-ms="863" status="PASS">
+        </test-method> <!-- forceUpdateProdus -->
+        <test-method signature="login_existinguser_us()[pri:2, instance:com.sonicjobs.apitest.ProdUS_Login@51c668e3]" started-at="2024-02-21T11:51:42 IST" name="login_existinguser_us" finished-at="2024-02-21T11:51:43 IST" duration-ms="1603" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_existinguser_us -->
-        <test-method signature="login_existinguser2_us()[pri:3, instance:com.sonicjobs.apitest.StagingUS@4b5a5ed1]" started-at="2024-02-19T15:24:34 IST" name="login_existinguser2_us" finished-at="2024-02-19T15:24:35 IST" duration-ms="880" status="PASS">
+        <test-method signature="login_existinguser2_us()[pri:3, instance:com.sonicjobs.apitest.ProdUS_Login@51c668e3]" started-at="2024-02-21T11:51:43 IST" name="login_existinguser2_us" finished-at="2024-02-21T11:51:45 IST" duration-ms="1617" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_existinguser2_us -->
-        <test-method signature="newSearch()[pri:4, instance:com.sonicjobs.apitest.StagingUS@4b5a5ed1]" started-at="2024-02-19T15:24:35 IST" name="newSearch" finished-at="2024-02-19T15:24:36 IST" duration-ms="1133" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newSearch -->
-        <test-method signature="newSerach2()[pri:5, instance:com.sonicjobs.apitest.StagingUS@4b5a5ed1]" started-at="2024-02-19T15:24:36 IST" name="newSerach2" finished-at="2024-02-19T15:24:37 IST" duration-ms="1161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newSerach2 -->
-      </class> <!-- com.sonicjobs.apitest.StagingUS -->
+      </class> <!-- com.sonicjobs.apitest.ProdUS_Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

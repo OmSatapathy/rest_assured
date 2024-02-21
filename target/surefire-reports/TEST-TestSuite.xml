@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="0" name="TestSuite" time="10.507" errors="0" skipped="0">
+<testsuite tests="10" failures="0" name="TestSuite" time="12.951" errors="0" skipped="0">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -24,7 +24,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/om.satapthy/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf12057319228023892454.tmp"/>
+    <property name="classworlds.conf" value="/Users/om.satapthy/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf18016838515152236146.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/om.satapthy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
@@ -58,18 +58,18 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="m2e.build.project.data.socket.port" value="62900"/>
+    <property name="m2e.build.project.data.socket.port" value="56909"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="com.sonicjobs.apitest.ProdUS_Login" name="forceUpdate_produs" time="1.927"/>
-  <testcase classname="com.sonicjobs.apitest.ProdUK_Login" name="forceUpdate_produk" time="1.928"/>
-  <testcase classname="com.sonicjobs.apitest.ProdUK_Login" name="login_existinguser_uk" time="1.342"/>
-  <testcase classname="com.sonicjobs.apitest.ProdUS_Login" name="login_existinguser_us" time="0.216"/>
-  <testcase classname="com.sonicjobs.apitest.ProdUK_search" name="oldSearch" time="1.49"/>
-  <testcase classname="com.sonicjobs.apitest.ProdUS_Search" name="newSearch" time="0.581"/>
-  <testcase classname="com.sonicjobs.apitest.ProdUK_Login" name="login_existinguser2_uk" time="0.73"/>
-  <testcase classname="com.sonicjobs.apitest.ProdUS_Login" name="login_existinguser2_us" time="0.92"/>
-  <testcase classname="com.sonicjobs.apitest.ProdUK_search" name="newSearch" time="0.953"/>
-  <testcase classname="com.sonicjobs.apitest.ProdUS_Search" name="newSerach2" time="2.981"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUK_Login" name="forceUpdateProduk" time="1.636"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUS_Login" name="forceUpdateProdus" time="1.637"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUK_Login" name="loginExistinguserUk" time="1.594"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUS_Login" name="loginExistinguserUs" time="0.021"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUS_Search" name="newSearch" time="2.647"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUK_search" name="oldSearch" time="0.581"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUK_Login" name="loginExistinguser2Uk" time="0.799"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUS_Login" name="loginExistinguser2Us" time="1.084"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUK_search" name="newSearch" time="1.955"/>
+  <testcase classname="com.sonicjobs.apitest.ProdUS_Search" name="newSerach2" time="4.219"/>
 </testsuite>

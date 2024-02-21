@@ -1,6 +1,7 @@
 package com.sonicjobs.apitest;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import com.sonicjobs.base.BaseUrl;
 import com.sonicjobs.base.FileReader;
 
@@ -13,7 +14,7 @@ import java.util.Properties;
 import org.json.JSONObject;
 import io.restassured.RestAssured;
 
-public class StagingUS_Login extends BaseUrl {
+public class StagingUsLogin extends BaseUrl {
 
 	@Test(priority = 1)
 	public static void forceUpdate_us() {

@@ -3,6 +3,7 @@ package com.sonicjobs.apitest;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import com.sonicjobs.base.BaseUrl;
 import com.sonicjobs.base.FileReader;
@@ -17,7 +18,7 @@ import java.util.Properties;
 import org.json.JSONObject;
 import io.restassured.response.Response;
 
-public class StagingUK_Login extends BaseUrl {
+public class StagingUkLogin extends BaseUrl {
 
 	Properties prop;
 

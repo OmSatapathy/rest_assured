@@ -1,6 +1,7 @@
 package com.sonicjobs.apitest;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -8,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.sonicjobs.base.BaseUrl;
 
-public class ProdUS_Search extends BaseUrl {
+public class ProdUsSearch extends BaseUrl {
 
 	@Test(dependsOnMethods = { "loginExistinguserUs" })
 	public void newSearch() {

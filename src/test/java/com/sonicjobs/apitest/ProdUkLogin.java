@@ -2,6 +2,7 @@ package com.sonicjobs.apitest;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -17,7 +18,7 @@ import com.sonicjobs.base.FileReader;
 
 import io.restassured.response.Response;
 
-public class ProdUK_Login extends BaseUrl {
+public class ProdUkLogin extends BaseUrl {
 
 	@Test(priority = 1)
 	public static void forceUpdateProduk() {

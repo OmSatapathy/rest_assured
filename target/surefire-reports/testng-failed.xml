@@ -3,37 +3,14 @@
 <suite thread-count="2" parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="2" parallel="methods" name="Test(failed)" verbose="0">
     <classes>
-      <class name="com.sonicjobs.apitest.ProdUkLogin">
-        <methods>
-          <include name="loginExistinguser2Uk"/>
-        </methods>
-      </class> <!-- com.sonicjobs.apitest.ProdUkLogin -->
       <class name="com.sonicjobs.apitest.ProdUsSearch">
         <methods>
           <include name="newSearch"/>
-          <include name="newSerach2"/>
         </methods>
       </class> <!-- com.sonicjobs.apitest.ProdUsSearch -->
-      <class name="com.sonicjobs.apitest.StagingUsLogin">
-        <methods>
-          <include name="loginExistinguser2Us"/>
-          <include name="loginExistinguserUs"/>
-        </methods>
-      </class> <!-- com.sonicjobs.apitest.StagingUsLogin -->
-      <class name="com.sonicjobs.apitest.ProdUkSearch">
-        <methods>
-          <include name="newSearch"/>
-        </methods>
-      </class> <!-- com.sonicjobs.apitest.ProdUkSearch -->
-      <class name="com.sonicjobs.apitest.StagingUkLogin">
-        <methods>
-          <include name="loginExistinguser2Uk"/>
-        </methods>
-      </class> <!-- com.sonicjobs.apitest.StagingUkLogin -->
       <class name="com.sonicjobs.apitest.ProdUsLogin">
         <methods>
           <include name="loginExistinguserUs"/>
-          <include name="loginExistinguser2Us"/>
         </methods>
       </class> <!-- com.sonicjobs.apitest.ProdUsLogin -->
     </classes>

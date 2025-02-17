@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-21T11:51:40 IST" name="Default suite" finished-at="2024-02-21T11:51:45 IST" duration-ms="4843">
+  <suite started-at="2025-01-06T19:41:46 IST" name="Default suite" finished-at="2025-01-06T19:41:53 IST" duration-ms="6244">
     <groups>
     </groups>
-    <test started-at="2024-02-21T11:51:40 IST" name="Default test" finished-at="2024-02-21T11:51:45 IST" duration-ms="4843">
-      <class name="com.sonicjobs.apitest.ProdUS_Login">
-        <test-method signature="forceUpdateProdus()[pri:1, instance:com.sonicjobs.apitest.ProdUS_Login@51c668e3]" started-at="2024-02-21T11:51:40 IST" name="forceUpdateProdus" finished-at="2024-02-21T11:51:42 IST" duration-ms="1585" status="PASS">
+    <test started-at="2025-01-06T19:41:46 IST" name="Default test" finished-at="2025-01-06T19:41:53 IST" duration-ms="6244">
+      <class name="com.user.test.Createuser">
+        <test-method signature="registerUser()[pri:0, instance:com.user.test.Createuser@4686afc2]" started-at="2025-01-06T19:41:46 IST" name="registerUser" finished-at="2025-01-06T19:41:53 IST" duration-ms="6209" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forceUpdateProdus -->
-        <test-method signature="login_existinguser_us()[pri:2, instance:com.sonicjobs.apitest.ProdUS_Login@51c668e3]" started-at="2024-02-21T11:51:42 IST" name="login_existinguser_us" finished-at="2024-02-21T11:51:43 IST" duration-ms="1603" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login_existinguser_us -->
-        <test-method signature="login_existinguser2_us()[pri:3, instance:com.sonicjobs.apitest.ProdUS_Login@51c668e3]" started-at="2024-02-21T11:51:43 IST" name="login_existinguser2_us" finished-at="2024-02-21T11:51:45 IST" duration-ms="1617" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login_existinguser2_us -->
-      </class> <!-- com.sonicjobs.apitest.ProdUS_Login -->
+        </test-method> <!-- registerUser -->
+      </class> <!-- com.user.test.Createuser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

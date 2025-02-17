@@ -48,6 +48,8 @@ public class ProdUsLogin extends BaseUrl {
 		us_jobseekerToken = RestAssured.given().contentType("application/json").body(login.toString()).when()
 				.post(prodBaseurlUs + "/auth/jobseeker/password").jsonPath().get("data.token");
 
+		
+		System.out.println(us_jobseekerToken);
 	}
 
 	@Test(priority = 3)
